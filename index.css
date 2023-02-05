@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: 5px solid pink;
+    height: 400px;
+    width: 400px;
+    margin-top: 200px;
+}
