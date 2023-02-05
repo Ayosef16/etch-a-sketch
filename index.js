@@ -12,3 +12,5 @@ function getGrid() {
         container.appendChild(row);
     }
 }
+
+getGrid();
