@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 
+
 function getGrid() {
     for (let i = 0; i < 16; i++) {
         let row = document.createElement('div');
@@ -14,3 +15,11 @@ function getGrid() {
 }
 
 getGrid();
+
+const square = document.querySelectorAll('.square');
+
+
+square.forEach( square => square.addEventListener('mouseover', () => {
+    square.style.backgroundColor = 'aqua';
+}));
+
