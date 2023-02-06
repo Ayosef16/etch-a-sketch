@@ -1,5 +1,9 @@
 const container = document.querySelector('.container');
 const colorpick = document.querySelector('.colorpick');
+const colorbtn = document.querySelector('.colorbtn');
+const rainbowbtn = document.querySelector('.rainbowbtn');
+const erasebtn = document.querySelector('.erasebtn');
+const clearbtn = document.querySelector('.clearbtn');
 
 function getGrid() {
     for (let i = 0; i < 16; i++) {
@@ -19,7 +23,15 @@ getGrid();
 const square = document.querySelectorAll('.square');
 
 
-square.forEach( square => square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = colorpick.value;
-}));
+function getColor() {
+    square.forEach( square => square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = colorpick.value;
+}))};
 
+function clearColor() {
+    window.location.reload();
+};
+
+colorbtn.addEventListener('click',getColor);
+
+clearbtn.addEventListener('click',clearColor);
