@@ -32,6 +32,12 @@ function clearColor() {
     window.location.reload();
 };
 
-colorbtn.addEventListener('click',getColor);
+function eraseColor() {
+    square.forEach( square => square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = 'white';
+}))};
 
+colorbtn.addEventListener('click',getColor);
+erasebtn.addEventListener('click',eraseColor);
 clearbtn.addEventListener('click',clearColor);
+
