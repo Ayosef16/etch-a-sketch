@@ -28,9 +28,9 @@ body{
 }
 
 .gridcontainer{
-    border: 5px solid red;
-    height: 400px;
-    width: 400px;
+    border: 5px solid blueviolet;
+    height: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     
@@ -45,7 +45,7 @@ body{
 .square{
     border: 1px solid black;
     background-color: white;
-    padding: 5px;
+    padding: 0;
     flex: 1;
     
 }
