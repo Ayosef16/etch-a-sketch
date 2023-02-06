@@ -4,6 +4,21 @@ const colorbtn = document.querySelector('.colorbtn');
 const rainbowbtn = document.querySelector('.rainbowbtn');
 const erasebtn = document.querySelector('.erasebtn');
 const clearbtn = document.querySelector('.clearbtn');
+const gridsize = document.querySelector('.gridsize');
+const sizevalue = document.querySelector('.sizevalue');
+
+
+
+function updateSize(e) {
+    gridsize.value = e.target.value;
+    sizevalue.textContent = `${gridsize.value} x ${gridsize.value}`;
+    console.log(gridsize.value);
+    console.log(e.target.value);
+};
+
+gridsize.addEventListener('input', updateSize);
+
+
 
 function getGrid() {
     for (let i = 0; i < 16; i++) {

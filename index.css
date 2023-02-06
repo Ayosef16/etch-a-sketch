@@ -108,3 +108,9 @@ button{
 a{
     color: greenyellow;
 }
+
+.sizevalue{
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: 900;
+}
