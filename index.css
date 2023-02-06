@@ -1,4 +1,4 @@
-body{
+body, html{
     background-color: black;
     margin: 0;
     padding: 0;
@@ -6,15 +6,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
+    height: 100%;
+    flex: 1;
+    gap: 100px;
 }
 
 .container{
     border: 5px solid red;
     height: 400px;
     width: 400px;
-    margin-top: 200px;
     display: flex;
     flex-direction: column;
+    
 }
 
 .row{
@@ -29,4 +33,46 @@ body{
     padding: 5px;
     flex: 1;
     
+}
+
+.colorpick{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-appearance: none;
+    border: none;
+    padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch{
+    border: none;
+    border-radius: 50%;    
+}
+
+input[type='color']::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+
+input[type='color']:hover, button:hover {
+    transform: scale(1.05);
+}
+
+.btncontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px ;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 1em;
+    width: 200px;
+    border: 1px solid red;
 }

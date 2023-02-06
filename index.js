@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-
+const colorpick = document.querySelector('.colorpick');
 
 function getGrid() {
     for (let i = 0; i < 16; i++) {
@@ -20,6 +20,6 @@ const square = document.querySelectorAll('.square');
 
 
 square.forEach( square => square.addEventListener('mouseover', () => {
-    square.style.backgroundColor = 'aqua';
+    square.style.backgroundColor = colorpick.value;
 }));
 
