@@ -12,19 +12,17 @@ const sizevalue = document.querySelector('.sizevalue');
 function updateSize(e) {
     gridsize.value = e.target.value;
     sizevalue.textContent = `${gridsize.value} x ${gridsize.value}`;
-    console.log(gridsize.value);
-    console.log(e.target.value);
+    removeGrid();
+    getGrid();
+    square = document.querySelectorAll('.square');
+    
 };
 
-gridsize.addEventListener('input', updateSize);
-
-
-
 function getGrid() {
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < gridsize.value ; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
-        for (let j = 0; j < 16; j++) {
+        for (let j = 0; j < gridsize.value; j++) {
             let square = document.createElement('div');
             square.classList.add('square');
             row.appendChild(square);
@@ -33,9 +31,18 @@ function getGrid() {
     }
 }
 
+function removeGrid() {
+    while (gridcontainer.firstChild) {
+        gridcontainer.removeChild(gridcontainer.firstChild);
+    }
+};
+
 getGrid();
 
-const square = document.querySelectorAll('.square');
+gridsize.addEventListener('input', updateSize);
+
+
+let square = document.querySelectorAll('.square');
 
 
 function getColor() {
