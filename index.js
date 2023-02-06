@@ -37,7 +37,20 @@ function eraseColor() {
         square.style.backgroundColor = 'white';
 }))};
 
+function randomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
+}
+
+function rainbowColor() {
+    square.forEach( square => square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = randomColor();
+}))};
+
 colorbtn.addEventListener('click',getColor);
+rainbowbtn.addEventListener('click',rainbowColor);
 erasebtn.addEventListener('click',eraseColor);
 clearbtn.addEventListener('click',clearColor);
 
