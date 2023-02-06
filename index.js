@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const gridcontainer = document.querySelector('.gridcontainer');
 const colorpick = document.querySelector('.colorpick');
 const colorbtn = document.querySelector('.colorbtn');
 const rainbowbtn = document.querySelector('.rainbowbtn');
@@ -14,7 +14,7 @@ function getGrid() {
             square.classList.add('square');
             row.appendChild(square);
         }
-        container.appendChild(row);
+        gridcontainer.appendChild(row);
     }
 }
 
